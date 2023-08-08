@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/output.css">
+    
+    <title>Bloo - Dashboard</title>
+  </head>
+  <body>
+    <main>
+      <!-- dashboard navigation -->
+      <header>
+        <nav>
+          <div class="logo">
+            <picture>
+                <source media="(min-width: 720px) src" srcset="./public/assets/bloo_logo_white.png">
+                <img src="./public/assets/bloo_logo_white.png" alt="simply a white logo verison of the bloo app logo">
+            </picture>
+          </div>
+          <div class="nav-menu">
+            <ul>
+              <li>
+                <span class="block"><i class="fa fa-tachometer text-blue-500" aria-hidden="true"></i></span>
+                <span class="block capitalize text-red-500">Tableau de board</span>
+              </li>
+              <li>
+                <span class="block"><i class="fa fa-cog text-blue-500" aria-hidden="true"></i></span>
+                <span class="block capitalize">Parametres</span>
+              </li>
+              <li>
+                <span class="block"><i class="fa fa-th text-blue-500" aria-hidden="true"></i></span>
+                <span class="block capitalize">Operations</span>
+              </li>
+              <li>
+                <span class="block"><i class="fa fa-users text-blue-500" aria-hidden="true"></i></span>
+                <span class="block capitalize">Membres</span>
+              </li>
+              <li>
+                <span class="block"><i class="fa fa-cog text-blue-500" aria-hidden="true"></i></span>
+                <span class="block capitalize">Models</span>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- dashboard navigation ends here -->
+
+      <!-- dashboard content starts here -->
+      <section>
+        <div class="section-container">
+          <div class="section-header"></div>
+          <div class="section-content">
+            <!-- Section stats -->
+            <div class="section-stats">
+                <div class="stat"><span class="stat-KPI">0</span>Operations</div>
+                <div class="stat"><span class="stat-KPI">0</span>Operateur</div>
+                <div class="stat"><span class="stat-KPI">0</span>Lecteurs</div>
+                <div class="stat"><span class="stat-KPI">0</span>Jrs restant</div>
+            </div>
+            <!-- section content -->
+            <div class="section-info">
+              <div class="info-container">
+                <div class="info-general">
+                    <h5>Information General</h5>
+                    <table>
+                        <tr>
+                            <td>Debut: 2022-10-24</td>
+                            <td>Fri: 2022-10-29</td>
+                            <td>Villes: 1</td>
+                            <td>Sites: 1</td>
+                            <td>Operateur: 0</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="info-actions">
+                    <button class="action-btn block">Afficher le questionnaire</button>
+                    <button class="action-btn block">Selectioner une operation</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./public//script/app.js"></script>
+    <script src="https://kit.fontawesome.com/523af87d78.js" crossorigin="anonymous"></script>
+  </body>
+</html>
