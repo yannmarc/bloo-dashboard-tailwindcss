@@ -19,32 +19,44 @@
       <header>
         <nav>
           <div class="logo">
-            <picture>
-                <source media="(min-width: 720px) src" srcset="./public/assets/bloo_logo_white.png">
-                <img src="./public/assets/bloo_logo_white.png" alt="simply a white logo verison of the bloo app logo">
-            </picture>
+            <div class="logo-img">
+                <picture>
+                    <source media="(min-width: 720px) src" srcset="./public/assets/bloo_logo_white.png">
+                    <img src="./public/assets/bloo_logo_white.png" alt="simply a white logo verison of the bloo app logo">
+                </picture>
+            </div>
+            <div class="hambuger-menu">
+                <span class="menu block"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            </div>
           </div>
           <div class="nav-menu">
             <ul>
-              <li>
+              <li class="">
                 <span class="block"><i class="fa fa-tachometer text-blue-500" aria-hidden="true"></i></span>
-                <span class="block capitalize text-red-500">Tableau de board</span>
+                <span class="block nav-link capitalize text-red-500">Tableau de board</span>
               </li>
               <li>
                 <span class="block"><i class="fa fa-cog text-blue-500" aria-hidden="true"></i></span>
-                <span class="block capitalize">Parametres</span>
+                <span class="block nav-link capitalize">Parametres</span>
               </li>
               <li>
                 <span class="block"><i class="fa fa-th text-blue-500" aria-hidden="true"></i></span>
-                <span class="block capitalize">Operations</span>
+                <span class="block nav-link capitalize">Operations</span>
               </li>
               <li>
                 <span class="block"><i class="fa fa-users text-blue-500" aria-hidden="true"></i></span>
-                <span class="block capitalize">Membres</span>
+                <span class="block nav-link capitalize">Membres</span>
               </li>
               <li>
                 <span class="block"><i class="fa fa-cog text-blue-500" aria-hidden="true"></i></span>
-                <span class="block capitalize">Models</span>
+                <span class="block nav-link capitalize">Models</span>
+              </li>
+              <li>
+                <div class="contact-icons justify-center items-center">
+                    <div class="block"><i class="fa fa-bell"></i></div>
+                    <div class="block"><i class="fa fa-headphones"></i></div>
+                    <div class="block"><i class="fa fa-user-circle"></i></div>
+                </div>
               </li>
             </ul>
           </div>
@@ -55,7 +67,14 @@
       <!-- dashboard content starts here -->
       <section>
         <div class="section-container">
-          <div class="section-header"></div>
+          <div class="section-header w-full flex justify-between px-4 items-center">
+            <span class="menu block"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            <div class="flex icons justify-center items-center">
+                <div class="block"><i class="fa fa-bell"></i></div>
+                <div class="block"><i class="fa fa-headphones"></i></div>
+                <div class="block"><i class="fa fa-user-circle"></i></div>
+            </div>
+          </div>
           <div class="section-content">
             <!-- Section stats -->
             <div class="section-stats">
