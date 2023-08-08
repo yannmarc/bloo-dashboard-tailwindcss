@@ -558,26 +558,41 @@ header {
 
 nav {
   width: 100%;
-  padding-top: 1rem;
+  padding-top: 0px;
+  padding-bottom: 0px;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-bottom: 3rem;
 }
 
 nav .logo {
-  height: auto;
-  width: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-left: 0px;
   padding-right: 0px;
 }
 
-nav .logo img {
+nav .logo-img {
+  height: auto;
+  width: 7rem;
+}
+
+nav .logo-img img {
   width: 100%;
+}
+
+nav .logo .hambuger-menu {
+  cursor: pointer;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 nav .nav-menu {
   margin-top: 1.5rem;
+  height: 0px;
   width: 100%;
+  --tw-translate-x: -100vw;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -591,6 +606,21 @@ nav .nav-menu {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(191 219 254 / var(--tw-ring-opacity));
+  transition-property: all;
+  transition-duration: 150ms;
+  transition-delay: 100ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav .nav-menu ul {
+  height: inherit;
+}
+
+nav .nav-menu.active-menu {
+  margin-bottom: 2rem;
+  height: 100%;
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 nav .nav-menu li {
@@ -618,6 +648,26 @@ nav .nav-menu li:hover {
   color: rgb(39 39 42 / var(--tw-text-opacity));
 }
 
+nav .nav-menu li.active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(82 82 91 / var(--tw-text-opacity));
+}
+
+nav .nav-menu li:last-child {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-icons {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
 /* Navbar section ends here */
 
 /* Dashboard content starts here */
@@ -635,15 +685,41 @@ section .section-container {
   width: 100%;
 }
 
+/* Section Header */
+
 section .section-header {
-  height: 2rem;
+  display: none;
   width: 100%;
+  align-items: center;
+  justify-content: space-between;
   --tw-bg-opacity: 1;
   background-color: rgb(239 246 255 / var(--tw-bg-opacity));
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
+.section-header .icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-header span i {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
+.section-header .icons i {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
+/* Section ends here */
 
 .section-content {
   padding-left: 1rem;
@@ -843,7 +919,10 @@ section .section-header {
 
   nav .nav-menu {
     margin-top: 1.5rem;
+    display: block;
     width: 100%;
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     border-radius: 0px;
     background-color: transparent;
     --tw-text-opacity: 1;
@@ -877,9 +956,35 @@ section .section-header {
     color: rgb(59 130 246 / var(--tw-text-opacity));
   }
 
+  nav .logo .hambuger-menu {
+    display: none;
+  }
+
+  .contact-icons {
+    display: none;
+  }
+
   /* Navbar section ends here */
 
   /* Dashboard content Starts here */
+
+  /* Section header */
+
+  section .section-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    --tw-bg-opacity: 1;
+    background-color: rgb(239 246 255 / var(--tw-bg-opacity));
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
 
   /* Stats */
 
